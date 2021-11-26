@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<header>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+
+</header>
+
+<body>
+    <div class="background">
+        <div class="blur"></div>
+    </div>
+    <div class="song_lyrics">
+        <h1>Lyrics</h1>
+        {% for i in range(len) %}
+        <p class="lyrics_lines">{{lyrics[i]}}</p>
+        {% endfor %}
+        <br>
+        <a class="link" href="/homepage">
+            Homepage
+        </a>
+
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+
+        <a class="link" href="{{url_for('logout')}}">
+            Logout
+        </a>
+        <br><br><br>
+    </div>
+</body>
+
+</html>

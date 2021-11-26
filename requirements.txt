@@ -1,0 +1,8 @@
+flask
+requests
+python-dotenv
+lyricsgenius
+flask-wtf
+flask-sqlalchemy
+flask-login
+postgres

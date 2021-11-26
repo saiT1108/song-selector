@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    </head>
+    <body>
+        <div class = "background">
+            <div class = "blur"></div>
+        </div>
+        <div class = "song_det">
+            <h1>Song&ensp;Select</h1>
+            <h2>{{dataList["Song"]}}</h2>
+            
+            <p><img id = "album_art" src="{{dataList['Image']}}"></p>
+            <p id = "lyrics"></p>
+            <audio src="{{dataList['Preview']}}" controls></audio>
+            
+            <h3>{{dataList["Artist"]}}</h3>
+            <a class="art_str" href="/lyrics">
+                Lyrics
+            </a>
+            <br><br>
+            
+            <a class="link" href="{{url_for('profile')}}">
+                Profile
+            </a>
+            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            <a class="link" href="{{url_for('logout')}}">
+                Logout
+            </a>
+            <br><br>
+        </div>
+    </body>
+</html>

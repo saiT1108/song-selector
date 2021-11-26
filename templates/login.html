@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="blur"></div>
+    </div>
+    <h1> Song Select Login </h1>
+    <div style="vertical-align: middle;"></div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="invalid_pwd" role="alert">
+        {{message}}
+        <p class="art_str">Try Again</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <br><br><br><br>
+    <div id="login">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            {{ form.username }}<br>
+            <br>
+            {{ form.password }}<br>
+            <br><br>
+            {{ form.submit }}
+        </form>
+    </div>
+    <br>
+    <a class="link" href="{{url_for('register')}}">Register</a>
+    <br><br>
+
+</body>
+
+</html>

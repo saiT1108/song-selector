@@ -1,0 +1,172 @@
+@font-face { font-family: 'Lazer84'; src: url('Lazer84.ttf'); }
+@font-face { font-family: 'Lazer84'; font-weight: bold; src: url('Lazer84.ttf'); }
+@font-face { font-family: 'Kabel'; src: url('Kabel-Black.ttf'); }
+@font-face { font-family: 'Summer84'; src: url('summer85.ttf'); } 
+@font-face { font-family: 'Summer85'; font-weight: bold; src: url('summer85.ttf');}
+@font-face { font-family: 'CyberB'; src: url('Cyberspace\ Raceway\ Back.otf'); }
+@font-face { font-family: 'CyberF'; src: url('Cyberspace\ Raceway\ Front.otf'); }
+
+html{
+    min-height: 100%;
+    background-color: blueviolet;
+}
+body{
+    text-align: center;
+}
+h1{
+    font-family: 'CyberF', 'monospace';
+    font-weight: lighter;
+    font-size: 50px;
+    color: rgb(255, 0, 242);
+    text-shadow: 2px 2px 2px rgb(52, 0, 195);
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(148, 86, 246));
+    -webkit-text-fill-color: linear-gradient(rgb(112, 72, 245), rgrgb(255, 255, 255));
+    border-radius: 6px;
+}
+h3{
+    font-family: 'CyberB', 'monospace';
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(225, 0, 255));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgb(87, 0, 168);
+    padding-bottom: none;
+}
+h2{
+    font-family: 'Lazer84', 'monospace';
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(52, 0, 195);
+
+}
+#album_art{
+    width: 550px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 2pt 3pt rgb(250, 198, 255);
+    outline: none;
+    transition: .1s;
+}
+.background {
+    background: url('./WaryMelodicAdeliepenguin-size_restricted.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-position: center;
+}
+.lyrics_lines{
+    white-space: pre-line;
+    font-family: 'CyberB', 'monospace';
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(239, 119, 255));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgb(87, 0, 168);
+}
+.link{
+    font-family: 'CyberF', 'monospace';
+    font-weight: lighter;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    outline: 2px white;
+    text-shadow: 2px 2px 2px rgb(52, 0, 195);
+}
+audio {
+    filter: saturate(150%) contrast(150%);
+    width: 550px;
+    height: 50px;
+    border-radius: 5px;
+}
+#username, #password{
+    width: 20%;
+    font-family: 'Lazer84';
+    font-weight: lighter;
+    vertical-align: middle;
+    background:  -webkit-linear-gradient(rgb(255, 255, 255), rgb(239, 119, 255));
+    border-radius: 8px;
+    padding: 10px;
+    border-width: 2px;
+    border-color: rgb(117, 0, 102);
+    border-style: ridge;
+    font-size: 20px;
+}
+#artist_input{
+    width: 20%;
+    font-family: 'Lazer84';
+    font-weight: lighter;
+    vertical-align: middle;
+    background:  -webkit-linear-gradient(rgb(255, 255, 255), rgb(239, 119, 255));
+    border-radius: 8px;
+    padding: 10px;
+    border-width: 2px;
+    border-color:rgb(85, 0, 141);
+    border-style: ridge;
+    font-size: 20px;
+}
+#artist_submit{
+    vertical-align: middle;
+    font-family: 'CyberB';
+    font-size: 20px;
+    text-shadow: blueviolet;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(225, 0, 255));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgb(87, 0, 168);
+    border-style: ridge;
+    border-color: transparent;
+    border-radius: 5px;
+}
+#submit{
+    vertical-align: middle;
+    font-family: 'CyberB';
+    font-size: 20px;
+    text-shadow: blueviolet;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(225, 0, 255));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgb(87, 0, 168);
+    border-style: ridge;
+    border-color: transparent;
+    border-radius: 5px;
+}
+.art_str{
+    font-family: 'Lazer84';
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(52, 0, 195);
+}
+.invalid_pwd{
+    font-family: 'CyberB', 'monospace';
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(52, 0, 195);
+}
+.invalid_user{
+    font-family: 'CyberB', 'monospace';
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(52, 0, 195);
+}

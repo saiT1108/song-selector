@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="blur"></div>
+    </div>
+    <h1> Register </h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="invalid_user" role="alert" style="vertical-align: middle;">
+        {{message}}
+        <p class="art_str">Choose a different username</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <br>
+    <p class="lyrics_lines" style="font-size: 25px;">Welcome, new user</p>
+    <br>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        <br><br>
+        {{ form.password }}
+        <br><br>
+        {{ form.submit }}
+    </form>
+    <br>
+    <a class="link" href="{{url_for('login')}}">Login</a>
+    <br><br>
+</body>
+
+</html>
