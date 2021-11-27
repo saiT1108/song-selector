@@ -12,8 +12,13 @@
         <div class="blur"></div>
     </div>
     <h1> Song Select Login </h1>
-    <h3>Welcome to the song selector!</h3>
-    <h2>Please login to view your favorite artists and songs, or register an account</h2>
+    <h2>Welcome to the song selector!</h2>
+    <br>
+    <p class="lyrics_lines">Ever been put on the spot when asked "what's a song you like", since there's just so many?
+        With this site, you can shuffle through the top tracks of your favorite artists one by one, 
+        and present that wherever you need to (to a friend, at a party, etc.)
+        Please login to view your artists, or register to get started.
+    </p>
     <div style="vertical-align: middle;"></div>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -25,7 +30,7 @@
     {% endfor %}
     {% endif %}
     {% endwith %}
-    <br><br><br><br>
+    <br><br>
     <div id="login">
         <form method="POST" action="">
             {{ form.hidden_tag() }}

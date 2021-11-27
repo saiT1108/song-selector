@@ -4,12 +4,69 @@
 
 <head>
     <link rel="stylesheet" href="/static/style.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script> -->
     <script>
-        function added(){
-            var fd = document.getElementById('message');
-            fd.innerHTML = "";
-            alert("Feedback submitted!")
+        function checklist(){
+            var t = document.getElementById('title')
+            t.innerText = "Checklist"
+            t.innerHTML = "Checklist"
+            var b = document.getElementById('info')
+            let string = "Database Usage - Used a SQLite database on heroku's cloud service to store all data\n"+
+            "<br>"+
+            "Ajax - Used Ajax to add artists to the current artist list on the <a href='/profile'><em>profile page</em></a>\n"+
+            "<br>"+
+            "Theme - Followed my own custom made, 80's synthwave-inspired theme with CSS/HTML\n"+
+            "<br>"+
+            "Library Usage - Used the requests and lyricsgenius libraries in Python to get data and retrieve <a href='/homepage'><em>lyrics</em></a>\n"+
+            "<br>"+
+            "JavaScript Usage - Used Javascript to create and implement <a href='/feedback'><em>feedback form</em></a>\n"+
+            "<br>"+
+            "Membership Area - The whole site is part of a <a href='/homepage'><em>membership area</em></a>, without which you can't have saved artists\n"+
+            "<br>"+
+            "General user - user: demouser password: ThisIsForWPClass\n"
+            b.innerText = string
+            b.innerHTML = string
+        }
+        function desc(){
+            var t = document.getElementById('title')
+            t.innerText = "Description"
+            t.innerHTML = "Description"
+            let string = "The users of this site are indecisive people who are unsure what song to pick at a given moment.\n"+
+            "<br>"+
+            "I want the user to get out of this site what I get out of it, a way to pick a song on the spot without\n"+
+            "thinking too much about it, a site they can trust to provide a song choice they can play at a party or event\n"+
+            "<br>"+
+            "I'm trying to solve the problem of indecisiveness and judgement when asked 'what song do you want to play?'.\n"+
+            "The user, when put on the spot (or any other situation), will be able to select any one of the top tracks\n"+
+            "from their favorite artists, and avert one of the biggest crises of social events/parties...\n"+
+            "<br>"+
+            "I want the user, upon using my site, to use it again, which would show their trust in the site and that I've\n"+
+            "done a good job. I would also like them to share it with a friend, to help them out next time they're put\n"+
+            "on the spot or just want to show someone a favorite song of theirs\n"
+            var b = document.getElementById('info')
+            b.innerText = string
+            b.innerHTML = string
+        }
+        function about(){
+            var t = document.getElementById('title')
+            t.innerText = "About Me"
+            let string = "Section 1: I'm <a href=http://saitippana.herokuapp.com><em>Sai Tippana</em></a>, an aspiring software engineer/full stack developer,\n" +
+            "and currently a junior at Georgia state University.\n" +
+            "<br>"+
+            "Section 2: This project embodies not just what I learned in my web programming class,\n"+
+            "but also from the other classes I've taken this year, it implements what I learned in terms\n"+
+            "of web development, API usage, and web app coding. Also it's a fun tool to show my favorite songs to friends\n"+
+            "<br>"+
+            "Section 3: The tech stack for this site is Python, Flask, SQLite, SQLalchemy, Javascript, PHP, and Heroku for deployment.\n"+
+            "<br>"+
+            "Section 4: In this class I've learned to think of web programming as more of an expandable craft,\n"+
+            "rather than a one-and-done type of skill. I learned how to use PHP and Javascript, and incorporate them into\n"+
+            "a cloud server to be deployed, and also learned how to research when I'm stuck. I've also learned that whenever\n"+
+            "I'm stuck, I should just go ahead and try something anyways, because that will motivate me to keep going,\n"+
+            "rather than procrastinating the solution\n"
+            t.innerHTML = "About Me"
+            var b = document.getElementById('info')
+            b.innerText = string
+            b.innerHTML = string
         }
     </script>
 </head>
@@ -30,10 +87,37 @@
     {% endif %}
     {% endwith %}
 
+    <div>
+        <h2 id="title">About Me</h2>
+        <p class="lyrics_lines" id="info">
+            Section 1: I'm <a href=http://saitippana.herokuapp.com><em>Sai Tippana</em></a>, an aspiring software engineer/full stack developer, 
+            and currently a junior as Georgia state University.
+            <br>
+            Section 2: This project embodies not just what I learned in my web programming class,
+            but also from the other classes I've taken this year, it embodies what I learned in terms
+            of web development, API usage, and web app coding. Also it's a fun tool to show my favorite songs to friends.
+            <br>
+            Section 3: The tech stack for this site is Pytho, Flask, SQLite, SQLalchemy, Javascript, PHP, and Heroku for deployment.
+            <br>
+            Section 4: In this class I've learned to think of web programming as more of an expandable craft,
+            rather than a one-and-done type of skill. I learned how to use PHP and Javascript, and incorporate them into
+            a cloud server to be deployed, and also learned how to research when I'm stuck. I've also learned that whenever
+            I'm stuck, I should just go ahead and try something anyways, because that will motivate me to keep going,
+            rather than procrastinating the solution
+        </p>
+        <br>
+        <div>
+            <button id="checkl" class="about" onclick=checklist();>Checklist</button>
+            <button id="desc" class="about" onclick=desc();>Description</button>
+            <button id="about" class="about" onclick=about();>About Me</button>
+        </div>
+        
+    </div>
+
     <br><br>
 
-    <a class="link" href="/homepage">
-        Homepage
+    <a class="link" href="/profile">
+        Profile
     </a>
 
     &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;

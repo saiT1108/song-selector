@@ -139,7 +139,7 @@ audio {
 #submit{
     vertical-align: middle;
     font-family: 'CyberB';
-    font-size: 20px;
+    font-size: 15px;
     text-shadow: blueviolet;
     padding-left: 10px;
     padding-right: 10px;
@@ -183,4 +183,19 @@ audio {
     border-color: rgb(117, 0, 102);
     border-style: ridge;
     font-size: 20px;
+}
+.about{
+    vertical-align: middle;
+    font-family: 'Lazer84';
+    font-size: 20px;
+   
+    background: rgb(52, 0, 195);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px rgb(87, 0, 168);
+    text-shadow: 1px 1px 1px white;
+    border-style: ridge;
+    border-color: transparent;
+    border-radius: 0px;
 }
