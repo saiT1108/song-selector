@@ -170,3 +170,17 @@ audio {
     color: white;
     text-shadow: 2px 2px 2px rgb(52, 0, 195);
 }
+.input-container{
+    text-align: center;
+    width: 40%;
+    font-family: 'Lazer84';
+    font-weight: lighter;
+    vertical-align: middle;
+    background:  -webkit-linear-gradient(rgb(255, 255, 255), rgb(239, 119, 255));
+    border-radius: 8px;
+    padding: 10px;
+    border-width: 2px;
+    border-color: rgb(117, 0, 102);
+    border-style: ridge;
+    font-size: 20px;
+}

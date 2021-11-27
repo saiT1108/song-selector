@@ -264,6 +264,10 @@ def lyricsPage():
         "lyricsPage.html", len=len(list_lyrics), lyrics=list_lyrics
     )
 
+@app.route("/feedback")
+def feedPage():
+    return flask.render_template("feedback.html")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8000)), debug=True)

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script> -->
+    <script>
+        function added(){
+            var fd = document.getElementById('message');
+            fd.innerHTML = "";
+            alert("Feedback submitted!")
+        }
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="blur"></div>
+    </div>
+    <h1> Feedback </h1>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="invalid_pwd" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <br><br>
+
+    <div class="container">
+        <div class="form">
+            <div class="contact-info">
+
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <h3> Have a suggestion to improve this site? Let me know! </h3>
+                    
+                    <div>
+                        <input  class = "input-container" type="email" name="email" placeholder="Email">
+                        
+                    </div>
+                    <br>
+                    <div>
+                        <textarea  class = "input-container" name="message" class="input" id="message" placeholder="Message"></textarea>
+                        
+                    </div>
+                    <br>
+                    <button id="submit" class="button nav" onclick=added();>Submit</button>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- 
+    <h3> Enter an artist ID: </h3>
+    <form method="POST" action="">
+        <input id="artist_input" type="text" name="artist_ID">
+        <br><br>
+        <input id="artist_submit" type="submit" name="Submit">
+    </form>
+    <br><br> -->
+
+    <a class="link" href="/homepage">
+        Homepage
+    </a>
+
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+
+    <a class="link" href="{{url_for('logout')}}">
+        Logout
+    </a>
+    <br><br>
+</body>
+
+</html>

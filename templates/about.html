@@ -4,14 +4,21 @@
 
 <head>
     <link rel="stylesheet" href="/static/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script> -->
+    <script>
+        function added(){
+            var fd = document.getElementById('message');
+            fd.innerHTML = "";
+            alert("Feedback submitted!")
+        }
+    </script>
 </head>
 
 <body>
     <div class="background">
         <div class="blur"></div>
     </div>
-    <h1> {{ usern }}'s Profile </h1>
+    <h1> Feedback </h1>
 
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -23,18 +30,6 @@
     {% endif %}
     {% endwith %}
 
-    {% for i in range(len) %}
-    <p class="art_str">{{artists_list[i]}}</p>
-    {% endfor %}
-
-    <br><br>
-
-    <h3> Enter an artist ID: </h3>
-    <form method="POST" action="">
-        <input id="artist_input" type="text" name="artist_ID">
-        <br><br>
-        <input id="artist_submit" type="submit" name="Submit">
-    </form>
     <br><br>
 
     <a class="link" href="/homepage">
@@ -45,12 +40,6 @@
 
     <a class="link" href="{{url_for('logout')}}">
         Logout
-    </a>
-
-    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-
-    <a class="link" href="/feedback">
-        Feedback
     </a>
     <br><br>
 </body>
